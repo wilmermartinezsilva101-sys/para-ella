@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#fff0f5">
+
+    <meta name="description"
+          content="Tengo una pregunta muy especial para ti ❤️">
+
     <title>Una pregunta para ti ❤️</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- CORAZONES FLOTANTES -->
 
     <div class="hearts" aria-hidden="true">
         <span>❤️</span>
@@ -17,120 +27,407 @@
         <span>❤️</span>
         <span>💘</span>
         <span>💕</span>
+        <span>💝</span>
+        <span>❤️</span>
+        <span>💞</span>
     </div>
+
+
+    <!-- TARJETA PRINCIPAL -->
 
     <main class="card">
 
-        <div class="top-text">♡ UNA PREGUNTA IMPORTANTE ♡</div>
-
-        <div class="photo-container">
-            <img src="img.png" alt="La chica más bonita ❤️">
-            <div class="photo-heart">♥</div>
+        <div class="top-text">
+            ♡ UNA PREGUNTA MUY ESPECIAL ♡
         </div>
 
-        <h1>Oye, tú... ❤️</h1>
+        <div class="mini-heart">
+            💗
+        </div>
+
+
+        <!-- LAS DOS FOTOS -->
+
+        <div class="photos-wrapper">
+
+            <!-- FOTO DEL JUEGO -->
+
+            <div class="photo-box">
+
+                <div class="photo-container">
+
+                    <img
+                        src="img.png"
+                        alt="Tu avatar del juego ❤️"
+                        loading="eager"
+                    >
+
+                    <div class="photo-heart">
+                        🎮
+                    </div>
+
+                </div>
+
+                <p class="photo-label">
+                    Mi niña virtual 💕
+                </p>
+
+            </div>
+
+
+            <!-- FOTO REAL -->
+
+            <div class="photo-box">
+
+                <div class="photo-container">
+
+                    <img
+                        src="ella-real.jpg"
+                        alt="La chica más hermosa ❤️"
+                        loading="eager"
+                    >
+
+                    <div class="photo-heart">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <p class="photo-label">
+                    Mi niña hermosa 💖
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENSAJE ROMÁNTICO -->
+
+        <h1>
+            Oye, tú... ❤️
+        </h1>
 
         <p class="message">
-            Hay algo que quiero preguntarte...
+
+            Quizás todo comenzó de una manera sencilla,
+            pero poco a poco te convertiste en alguien
+            muy especial para mí.
+
+            <br><br>
+
+            Me encanta hablar contigo, compartir momentos
+            y saber que estás ahí.
+
+            <br><br>
+
+            Y aunque a veces no encuentre las palabras
+            perfectas para decirlo...
+
             <br>
-            y espero que tu respuesta sea un <span>sí</span>. 🥹
+
+            <span>
+                Tú me haces muy feliz. 🥹💕
+            </span>
+
         </p>
 
-        <div class="divider">♥ ♥ ♥</div>
 
-        <h2>¿Quieres ser mi novia? 💍</h2>
-
-        <p class="subtitle">
-            Prometo hacer todo lo posible para verte sonreír. ❤️
-        </p>
-
-        <div class="buttons">
-            <button id="yesBtn">¡SÍ, QUIERO! ❤️</button>
-            <button id="noBtn">No 🙈</button>
+        <div class="divider">
+            ♥ ♥ ♥
         </div>
 
-        <p class="footer">Hecho especialmente para ti ♡</p>
+
+        <!-- PREGUNTA PRINCIPAL -->
+
+        <div class="question-section">
+
+            <p class="question-intro">
+                Por eso hoy quiero preguntarte algo...
+            </p>
+
+            <h2>
+                ¿Quieres ser mi novia? 💍❤️
+            </h2>
+
+            <p class="subtitle">
+
+                No te prometo una historia perfecta,
+                pero sí muchas ganas de hacerte feliz,
+                cuidarte y crear recuerdos bonitos contigo.
+
+                💗
+
+            </p>
+
+        </div>
+
+
+        <!-- BOTONES -->
+
+        <div class="buttons">
+
+            <button id="yesBtn" type="button">
+                ¡SÍ, QUIERO! ❤️
+            </button>
+
+            <button id="noBtn" type="button">
+                No 🙈
+            </button>
+
+        </div>
+
+
+        <p class="footer">
+            Hecho con mucho cariño, especialmente para ti ♡
+        </p>
 
     </main>
 
-    <div id="celebration" class="celebration hidden">
+
+    <!-- PANTALLA DE CELEBRACIÓN -->
+
+    <div
+        id="celebration"
+        class="celebration hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successTitle"
+    >
+
         <div class="success-card">
-            <div class="big-heart">❤️</div>
 
-            <h1>¡SABÍA QUE DIRÍAS QUE SÍ! 🥹💕</h1>
+            <div class="big-heart">
+                ❤️
+            </div>
 
-            <p class="success-message">
-                Desde ahora, quiero crear muchos recuerdos bonitos contigo.
-                <br><br>
-                Quiero hacerte sonreír, apoyarte y demostrarte lo especial
-                que eres para mí.
-                <br><br>
-                <strong>¿Nuestro primer capítulo juntos? 💗</strong>
+            <p class="success-top">
+                ♡ COMIENZA NUESTRA HISTORIA ♡
             </p>
 
-            <div class="love-text">Tú y yo. ❤️</div>
+            <h1 id="successTitle">
+                ¡DIJISTE QUE SÍ! 🥹💕
+            </h1>
 
-            <button id="closeBtn">Volver a verte 💕</button>
+
+            <!-- FOTOS EN LA SORPRESA -->
+
+            <div class="success-photos">
+
+                <img
+                    src="img.png"
+                    alt="Tu avatar"
+                >
+
+                <span class="between-heart">
+                    ❤️
+                </span>
+
+                <img
+                    src="ella-real.jpg"
+                    alt="Tu foto hermosa"
+                >
+
+            </div>
+
+
+            <p class="success-message">
+
+                No sabes lo feliz que me hace tu respuesta.
+
+                <br><br>
+
+                Quiero que esto sea el comienzo de
+                algo muy bonito entre nosotros.
+
+                <br><br>
+
+                Quiero compartir risas, momentos,
+                aventuras y muchos recuerdos contigo.
+
+                <br><br>
+
+                Y sobre todo...
+
+                <br>
+
+                <strong>
+                    Quiero hacerte sentir tan especial
+                    como tú me haces sentir a mí. ❤️
+                </strong>
+
+            </p>
+
+
+            <div class="love-text">
+                Tú y yo, una bonita historia. 💕
+            </div>
+
+
+            <button id="closeBtn" type="button">
+                Volver a nuestra página ❤️
+            </button>
+
         </div>
+
     </div>
 
+
+    <!-- JAVASCRIPT -->
+
     <script>
+
         const yesBtn = document.getElementById("yesBtn");
         const noBtn = document.getElementById("noBtn");
-        const celebration = document.getElementById("celebration");
-        const closeBtn = document.getElementById("closeBtn");
+
+        const celebration =
+            document.getElementById("celebration");
+
+        const closeBtn =
+            document.getElementById("closeBtn");
+
+
+        // MENSAJES DIVERTIDOS DEL BOTÓN NO
 
         const noMessages = [
             "¿Segura? 🥺",
-            "Piénsalo otra vez 💗",
-            "¿Ni un poquito? 😭",
-            "Dame una oportunidad ❤️",
-            "¿Y si te digo que sí? 🥹"
+            "¿Lo pensaste bien? 💗",
+            "¿Ni un poquito? 🥹",
+            "Piénsalo otra vez ❤️",
+            "¿Segurísima? 💕",
+            "Está bien, respeto tu decisión ❤️"
         ];
 
         let attempts = 0;
 
+
         noBtn.addEventListener("click", () => {
+
             noBtn.textContent =
-                noMessages[attempts % noMessages.length];
+                noMessages[Math.min(
+                    attempts,
+                    noMessages.length - 1
+                )];
 
             attempts++;
 
-            yesBtn.style.transform =
-                `scale(${1 + Math.min(attempts * 0.08, 0.5)})`;
+            // Pequeña animación del botón
+
+            noBtn.classList.remove("shake");
+
+            void noBtn.offsetWidth;
+
+            noBtn.classList.add("shake");
+
         });
+
+
+        // CUANDO ELLA DICE QUE SÍ
 
         yesBtn.addEventListener("click", () => {
+
             celebration.classList.remove("hidden");
+
+            document.body.classList.add("modal-open");
+
+            closeBtn.focus();
+
             createConfetti();
+
         });
+
+
+        // CERRAR CELEBRACIÓN
 
         closeBtn.addEventListener("click", () => {
+
             celebration.classList.add("hidden");
+
+            document.body.classList.remove("modal-open");
+
+            yesBtn.focus();
+
         });
 
-        function createConfetti() {
-            const emojis = ["❤️", "💕", "💖", "💗", "💘", "✨"];
 
-            for (let i = 0; i < 45; i++) {
-                const heart = document.createElement("span");
+        // CERRAR CON ESCAPE
+
+        document.addEventListener("keydown", (event) => {
+
+            if (
+                event.key === "Escape" &&
+                !celebration.classList.contains("hidden")
+            ) {
+
+                celebration.classList.add("hidden");
+
+                document.body.classList.remove("modal-open");
+
+                yesBtn.focus();
+
+            }
+
+        });
+
+
+        // LLUVIA DE CORAZONES
+
+        function createConfetti() {
+
+            const emojis = [
+                "❤️",
+                "💕",
+                "💖",
+                "💗",
+                "💘",
+                "✨",
+                "💝"
+            ];
+
+            const reduceMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+            if (reduceMotion) return;
+
+            for (let i = 0; i < 55; i++) {
+
+                const heart =
+                    document.createElement("span");
 
                 heart.classList.add("confetti");
-                heart.textContent =
-                    emojis[Math.floor(Math.random() * emojis.length)];
 
-                heart.style.left = Math.random() * 100 + "vw";
+                heart.textContent =
+                    emojis[
+                        Math.floor(
+                            Math.random() * emojis.length
+                        )
+                    ];
+
+                heart.style.left =
+                    Math.random() * 100 + "vw";
+
                 heart.style.animationDuration =
                     (2 + Math.random() * 3) + "s";
+
+                heart.style.animationDelay =
+                    Math.random() * 1.5 + "s";
 
                 heart.style.fontSize =
                     (15 + Math.random() * 20) + "px";
 
                 document.body.appendChild(heart);
 
-                setTimeout(() => heart.remove(), 5000);
+                setTimeout(() => {
+
+                    heart.remove();
+
+                }, 6500);
+
             }
+
         }
+
     </script>
 
 </body>
