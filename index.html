@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pregunta para ti ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hearts" aria-hidden="true">
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>❤️</span>
+        <span>💘</span>
+        <span>💕</span>
+    </div>
+
+    <main class="card">
+
+        <div class="top-text">♡ UNA PREGUNTA IMPORTANTE ♡</div>
+
+        <div class="photo-container">
+            <img src="img.png" alt="La chica más bonita ❤️">
+            <div class="photo-heart">♥</div>
+        </div>
+
+        <h1>Oye, tú... ❤️</h1>
+
+        <p class="message">
+            Hay algo que quiero preguntarte...
+            <br>
+            y espero que tu respuesta sea un <span>sí</span>. 🥹
+        </p>
+
+        <div class="divider">♥ ♥ ♥</div>
+
+        <h2>¿Quieres ser mi novia? 💍</h2>
+
+        <p class="subtitle">
+            Prometo hacer todo lo posible para verte sonreír. ❤️
+        </p>
+
+        <div class="buttons">
+            <button id="yesBtn">¡SÍ, QUIERO! ❤️</button>
+            <button id="noBtn">No 🙈</button>
+        </div>
+
+        <p class="footer">Hecho especialmente para ti ♡</p>
+
+    </main>
+
+    <div id="celebration" class="celebration hidden">
+        <div class="success-card">
+            <div class="big-heart">❤️</div>
+
+            <h1>¡SABÍA QUE DIRÍAS QUE SÍ! 🥹💕</h1>
+
+            <p class="success-message">
+                Desde ahora, quiero crear muchos recuerdos bonitos contigo.
+                <br><br>
+                Quiero hacerte sonreír, apoyarte y demostrarte lo especial
+                que eres para mí.
+                <br><br>
+                <strong>¿Nuestro primer capítulo juntos? 💗</strong>
+            </p>
+
+            <div class="love-text">Tú y yo. ❤️</div>
+
+            <button id="closeBtn">Volver a verte 💕</button>
+        </div>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+        const celebration = document.getElementById("celebration");
+        const closeBtn = document.getElementById("closeBtn");
+
+        const noMessages = [
+            "¿Segura? 🥺",
+            "Piénsalo otra vez 💗",
+            "¿Ni un poquito? 😭",
+            "Dame una oportunidad ❤️",
+            "¿Y si te digo que sí? 🥹"
+        ];
+
+        let attempts = 0;
+
+        noBtn.addEventListener("click", () => {
+            noBtn.textContent =
+                noMessages[attempts % noMessages.length];
+
+            attempts++;
+
+            yesBtn.style.transform =
+                `scale(${1 + Math.min(attempts * 0.08, 0.5)})`;
+        });
+
+        yesBtn.addEventListener("click", () => {
+            celebration.classList.remove("hidden");
+            createConfetti();
+        });
+
+        closeBtn.addEventListener("click", () => {
+            celebration.classList.add("hidden");
+        });
+
+        function createConfetti() {
+            const emojis = ["❤️", "💕", "💖", "💗", "💘", "✨"];
+
+            for (let i = 0; i < 45; i++) {
+                const heart = document.createElement("span");
+
+                heart.classList.add("confetti");
+                heart.textContent =
+                    emojis[Math.floor(Math.random() * emojis.length)];
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration =
+                    (2 + Math.random() * 3) + "s";
+
+                heart.style.fontSize =
+                    (15 + Math.random() * 20) + "px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => heart.remove(), 5000);
+            }
+        }
+    </script>
+
+</body>
+</html>
